@@ -26,7 +26,7 @@ Current build status
     <td>Drone</td>
     <td>
       <a href="https://cloud.drone.io/conda-forge/jsonnet-feedstock">
-        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/master.svg?label=Linux">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/jsonnet-feedstock/master.svg?label=Linux">
       </a>
     </td>
   </tr>
@@ -262,4 +262,5 @@ Feedstock Maintainers
 
 * [@michamucha](https://github.com/michamucha/)
 * [@nelson-liu](https://github.com/nelson-liu/)
+* [@synapticarbors](https://github.com/synapticarbors/)
 

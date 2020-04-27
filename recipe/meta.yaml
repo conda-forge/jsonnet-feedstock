@@ -1,5 +1,5 @@
 {% set name = "jsonnet" %}
-{% set version = "0.11.2" %}
+{% set version = "0.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3201ca48b0ddc4d65a534686436cd435491addcf26346b07dbd69b38f66f4f8f
+  sha256: e8fcf1049df374c0e81ed13288bdc6d826fd381e7fc2671b0946f4964b06f915
 
 build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [win]
-  number: 1
 
 requirements:
   build:
@@ -22,7 +23,6 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
   run:
     - python
 
@@ -41,3 +41,4 @@ extra:
   recipe-maintainers:
     - nelson-liu
     - michamucha
+    - synapticarbors
