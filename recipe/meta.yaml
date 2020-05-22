@@ -1,5 +1,5 @@
 {% set name = "jsonnet" %}
-{% set version = "0.15.0" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e8fcf1049df374c0e81ed13288bdc6d826fd381e7fc2671b0946f4964b06f915
+  sha256: 4d6eff8c17e146dccd244eda45317577cd5e264ce8d5d0676f1f36afdc01307e
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
-  skip: True  # [win]
+  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [win]
 
 requirements:
   build:
@@ -35,7 +35,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Python bindings for Jsonnet - The data templating language'
+  summary: Python bindings for Jsonnet - The data templating language
 
 extra:
   recipe-maintainers:
