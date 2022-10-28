@@ -1,5 +1,5 @@
 {% set name = "jsonnet" %}
-{% set version = "0.17.0" %}
+{% set version = "0.19.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 23ffcd4d03a10af7b20b53feee16627debe28345a4d7d5ed07881b7444553bfb
+  sha256: 1728dea70933f0ae1e9355cdafc99dd296ae5c7457b374e2df4e94595e2a8115
 
 build:
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win]
 
