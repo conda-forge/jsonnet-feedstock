@@ -1,6 +1,7 @@
 {% set name = "jsonnet" %}
 {% set version = "0.20.0" %}
 
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -9,10 +10,11 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7e770c7bf3a366b97b650a39430450f77612e74406731eb75c5bd59f3f104d4f
 
+
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [win]
+  skip: true  # [win or ppc64le]
 
 requirements:
   build:
