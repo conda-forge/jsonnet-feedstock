@@ -9,6 +9,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7e770c7bf3a366b97b650a39430450f77612e74406731eb75c5bd59f3f104d4f
+  patches:
+    - patches/0001-python313-pyeval-fix.patch
 
 
 build:
