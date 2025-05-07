@@ -1,5 +1,5 @@
 {% set name = "jsonnet" %}
-{% set version = "0.20.0" %}
+{% set version = "0.21.0" %}
 
 
 package:
@@ -8,13 +8,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7e770c7bf3a366b97b650a39430450f77612e74406731eb75c5bd59f3f104d4f
+  sha256: 7fe2865e6e1dc2b9791d880fea3eba7e72334b256d85f027da3ae1f56a55b1da
   patches:
     - patches/0001-python313-pyeval-fix.patch
 
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win or ppc64le]
 
