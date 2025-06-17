@@ -14,7 +14,7 @@ source:
 
 build:
   number: 0
-  skip: win or ppc64le
+  skip: ppc64le
   script: python -m pip install . -vv --no-build-isolation --no-deps
 
 requirements:
