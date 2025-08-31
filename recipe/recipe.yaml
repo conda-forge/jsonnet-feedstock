@@ -13,16 +13,16 @@ source:
   sha256: 7fe2865e6e1dc2b9791d880fea3eba7e72334b256d85f027da3ae1f56a55b1da
 
 build:
-  number: 1
+  number: 2
   skip: ppc64le
   script: python -m pip install . -vv --no-build-isolation --no-deps
 
 requirements:
   build:
     - if: build_platform != target_platform
-      then: 
-      - python
-      - cross-python_${{ target_platform }}
+      then:
+        - python
+        - cross-python_${{ target_platform }}
     - cmake
     - make
     - ${{ compiler('c') }}
