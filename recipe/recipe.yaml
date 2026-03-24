@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: jsonnet
-  version: 0.21.0
+  version: "0.22.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 7fe2865e6e1dc2b9791d880fea3eba7e72334b256d85f027da3ae1f56a55b1da
+  sha256: eae5d9bf23c778baad39390f88c13c03b2090dfb5dfa148d6e217df8c1448258
 
 build:
-  number: 2
+  number: 0
   skip: ppc64le
   script: python -m pip install . -vv --no-build-isolation --no-deps
 
