@@ -13,7 +13,7 @@ source:
   sha256: eae5d9bf23c778baad39390f88c13c03b2090dfb5dfa148d6e217df8c1448258
 
 build:
-  number: 0
+  number: 1
   skip: ppc64le
   script: python -m pip install . -vv --no-build-isolation --no-deps
 
